@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Export generator="Cache" version="25">
-  <Document name="rest-template.ZPM">
+  <Document name="zpm-demo.ZPM">
     <Module>
-      <Name>rest-template</Name>
-      <Version>1.0.6</Version>
+      <Name>zpm-Demo</Name>
+      <Version>1.0.0</Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="Sample.PKG"/>
      
        <CSPApplication 
-        Url="/crud"
+        Url="/zpmdemo"
         DispatchClass="Sample.PersonREST"
         MatchRoles=":{$dbrole}"
         PasswordAuthEnabled="1"

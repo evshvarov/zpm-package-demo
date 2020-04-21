@@ -20,8 +20,21 @@ XData UrlMap [ XMLNamespace = "http://www.intersystems.com/urlmap" ]
 <Route Url="/persons/:id" Method="DELETE" Call="DeletePerson"/>
 <!-- Create a person-->
 <Route Url="/persons/" Method="POST" Call="CreatePerson"/>
+<!-- Deliver the answer-->
+<Route Url="/question/" Method="GET" Call="Answer"/>
+
 
 </Routes>
+}
+
+/// Answer
+ClassMethod Answer() As %Status
+{
+  SET answer = 42
+  SET info = {
+    "answer": (answer)
+  }
+  RETURN ..%ProcessResult($$$OK, info)
 }
 
 /// PersonsREST general information
